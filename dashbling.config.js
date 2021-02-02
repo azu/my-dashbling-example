@@ -40,13 +40,15 @@ module.exports = {
                 eventId: "jser-info-status"
             })
         },
-        {
-            schedule: "*/5 * * * *",
-            fn: require("./jobs/github-project")({
-                GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-                eventId: "github-project"
-            })
-        },
+        // Hard code config in ./jobs/github-project...
+        // You should edit /jobs/github-project
+        // {
+        //     schedule: "*/5 * * * *",
+        //     fn: require("./jobs/github-project")({
+        //         GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+        //         eventId: "github-project"
+        //     })
+        // },
         {
             schedule: "*/10 * * * *",
             fn: require("./jobs/natureremo")({

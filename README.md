@@ -46,3 +46,4 @@ curl -XPOST -H "Content-Type: application/json" \
 ## Dev
 
     yarn dev
+    open http://localhost:3000
