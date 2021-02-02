@@ -4,7 +4,9 @@ const { graphql } = require("@octokit/graphql");
  * @param {{ type: "daily" | "work", GITHUB_TOKEN:string, itemLimit: number }}
  */
 const fetchDaily = async ({ type, GITHUB_TOKEN, itemLimit }) => {
-    const projectNumber = type === "daily" ? 2 : 3;
+    const DAILY_NUMBER = 1;
+    const WORK_NUMBER = 2;
+    const projectNumber = type === "daily" ? DAILY_NUMBER : WORK_NUMBER;
     const query = `
 query { 
   repository(owner:"yourname" name:"your-repo") {
